@@ -1,0 +1,109 @@
+.defect-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    font-size: 16px;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+th {
+    background-color: #1976d2;
+    color: white;
+}
+
+td,
+th {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Priority row coloring */
+.row-priority-high {
+    background-color: #ffe5e5;
+}
+
+.row-priority-medium {
+    background-color: #fff9e6;
+}
+
+.row-priority-low {
+    background-color: #e6f9e6;
+}
+
+/* Status badge styles */
+.status-badge {
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-weight: bold;
+}
+
+.status-badge.open {
+    background-color: #fce4ec;
+    color: #c2185b;
+}
+
+.status-badge.fixed {
+    background-color: #e0f2f1;
+    color: #00796b;
+}
+
+.mark-fixed-btn {
+    background-color: #2e7d32;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 6px 12px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.mark-fixed-btn:hover {
+    transform: scale(1.05);
+}
+
+.fixed-label {
+    color: green;
+    font-weight: bold;
+}
+
+/* Fade-in effects */
+.fade-fixed {
+    animation: pulseFixed 0.5s ease-in;
+}
+
+.fade-open {
+    animation: pulseOpen 0.5s ease-in;
+}
+
+@keyframes pulseFixed {
+    0% {
+        background-color: #e0f2f1;
+    }
+
+    100% {
+        background-color: inherit;
+    }
+}
+
+@keyframes pulseOpen {
+    0% {
+        background-color: #fce4ec;
+    }
+
+    100% {
+        background-color: inherit;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
